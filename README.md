@@ -73,4 +73,14 @@ This will start the application, and you can access it through your web browser 
 2. **Access the Application:**
 Open your web browser and navigate to http://localhost:3000 to access the application.
 
+Access the application through localhost:3000 on your browser.
+
+<!-- Screenshot of the Register Page -->
+![Register Page](/screenshots/register.png)
+
+<!-- Screenshot of the Login Page -->
+![Login Page](/screenshots/login.png)
+
+<!-- Screenshot of the Secrets Page -->
+![Secrets Page](/screenshots/secrets.png)
 
