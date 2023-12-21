@@ -26,4 +26,19 @@ The AuthLearningProject is an educational venture into the world of web security
 ## Conclusion and Reflection
 This project served as a practical exercise in building a secure authentication system, providing a comprehensive look into the security considerations necessary for modern web development.
 
+## Getting Started
 
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js
+- npm (comes with Node.js)
+- Git
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Danh321/AuthLearningProject.git
