@@ -40,5 +40,35 @@ Before you begin, ensure you have the following installed:
 ### Installation
 
 1. **Clone the repository:**
-   ```sh
    git clone https://github.com/Danh321/AuthLearningProject.git
+
+2. **Navigate to the project directory:**
+    cd AuthLearningProject
+
+3. **Set up environment variables:**
+Create a .env file in the root directory and fill it with your environment variables:
+
+    DATABASE_URI=your_database_uri
+    SESSION_SECRET=your_session_secret
+    OAUTH_CLIENT_ID=your_oauth_client_id
+    OAUTH_CLIENT_SECRET=your_oauth_client_secret
+
+Replace the placeholders with your actual data. Do not commit this file to your public repository.
+
+4. **Start the server:**
+    npm start
+
+Access the application through localhost:3000 on your browser.
+
+### Usage
+
+1. **Start the server:**
+
+    npm start
+
+This will start the application, and you can access it through your web browser at http://localhost:3000.
+
+2. **Access the Application:**
+Open your web browser and navigate to http://localhost:3000 to access the application.
+
+
