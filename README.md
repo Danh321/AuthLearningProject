@@ -3,6 +3,8 @@
 ## Project Overview
 The AuthLearningProject is an educational venture into the world of web security, with a focus on user authentication mechanisms within web applications. It showcases the implementation of robust authentication systems using modern security protocols and techniques.
 
+![Root Page](/screenshots/root.png)
+
 ## Technologies Used
 - **OAuth 2.0**: Authorization framework for secure delegated access.
 - **Node.js & Express.js**: Server-side application framework.
