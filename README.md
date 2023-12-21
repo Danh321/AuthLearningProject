@@ -8,7 +8,7 @@ The AuthLearningProject is an educational venture into the world of web security
 - **Node.js & Express.js**: Server-side application framework.
 - **bcrypt**: Password hashing library for secure password storage.
 
-## Key Concepts Mastered
+## Key Concepts Learned
 - Password Security with bcrypt.
 - Session Management for user sessions.
 - Integration of third-party Authentication via OAuth.
