@@ -1,120 +1,148 @@
 # AuthLearningProject
 
-## Project Overview
-The AuthLearningProject is an educational venture into the world of web security, with a focus on user authentication mechanisms within web applications. It showcases the implementation of robust authentication systems using modern security protocols and techniques.
+## Table of Contents
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Learning Highlights](#learning-highlights)
+- [Security Measures](#security-measures)
+- [Development Environment](#development-environment)
+- [Conclusion](#conclusion)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+- [PostgreSQL Setup](#postgresql-setup)
+- [Google Authentication](#google-authentication)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+- [About the Author](#about-the-author)
+
+## Overview
+The AuthLearningProject is an initiative aimed at exploring web security, particularly focusing on user authentication in web applications. It involves the implementation of robust authentication systems through modern security protocols and techniques.
 
 ![Root Page](/screenshots/root.png)
 
-## Technologies Used
-- **OAuth 2.0**: Authorization framework for secure delegated access.
-- **Node.js & Express.js**: Server-side application framework.
-- **bcrypt**: Password hashing library for secure password storage.
+## Technologies
+- **OAuth 2.0**: For secure delegated access.
+- **Node.js & Express.js**: Server-side frameworks.
+- **bcrypt**: For secure password hashing.
 
-## Key Concepts Learned
-- Password Security with bcrypt.
-- Session Management for user sessions.
-- Integration of third-party Authentication via OAuth.
-- Secure handling of Environment Variables.
+## Learning Highlights
+- Implementing bcrypt for password security.
+- Managing user sessions.
+- OAuth integration for third-party authentication.
+- Secure handling of environment variables.
 
-## Security Practices
-- Use of `.env` files for configuration settings.
-- Input Validation to protect against malicious input.
-- Ensuring data integrity with HTTPS.
+## Security Measures
+- Using `.env` for sensitive configurations.
+- Input validation against malicious data.
+- Data integrity through HTTPS.
 
-## Development Tools
-- **Git**: For version control and maintaining a clean commit history.
-- **GitHub**: For hosting the repository and collaboration.
+## Development Environment
+- **Git**: For version control.
+- **GitHub**: Repository hosting and collaboration.
 
-## Conclusion and Reflection
-This project served as a practical exercise in building a secure authentication system, providing a comprehensive look into the security considerations necessary for modern web development.
+## Conclusion
+This project was a hands-on experience in creating a secure authentication system, delving into essential security aspects of modern web development.
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
 ### Prerequisites
-
-Before you begin, ensure you have the following installed:
 - Node.js
-- npm (comes with Node.js)
+- npm (included with Node.js)
 - Git
 
-### Installation
+### Setup Instructions
+1. **Clone the Repo**:
+git clone https://github.com/Danh321/AuthLearningProject.git
+2. **Enter Directory**:
+cd AuthLearningProject
+3. **Environment Variables**:
+- Create a `.env` file in the root.
+- Add:
+  ```
+  DATABASE_URI=<your_database_uri>
+  SESSION_SECRET=<your_session_secret>
+  OAUTH_CLIENT_ID=<your_oauth_client_id>
+  OAUTH_CLIENT_SECRET=<your_oauth_client_secret>
+  ```
+- Replace placeholders with actual values.
+4. **Start Server**:
+npm start
+Access at `localhost:3000`.
 
-1. **Clone the repository:**
-   git clone https://github.com/Danh321/AuthLearningProject.git
+## PostgreSQL Setup
+This project uses PostgreSQL as its database system. Follow these steps to set up PostgreSQL for the project:
+### Installing PostgreSQL
+1. **Download PostgreSQL**: Visit the [official PostgreSQL download page](https://www.postgresql.org/download/) and download the version suitable for your operating system.
+2. **Install PostgreSQL**: Follow the installation instructions provided on the download page or in the installer.
 
-2. **Navigate to the project directory:**
-    cd AuthLearningProject
+### Setting Up the Database
+1. **Start PostgreSQL**: Open the PostgreSQL application to start the PostgreSQL server.
+2. **Create a New Database**: Use the PostgreSQL command line or a GUI like pgAdmin to create a new database for the project.
 
-3. **Set up environment variables:**
-Create a .env file in the root directory and fill it with your environment variables:
+### Configuring the Project
+1. **Update Environment Variables**: In your project's `.env` file, set the `DATABASE_URI` to your PostgreSQL database URI.
+DATABASE_URI=postgresql://username:password@localhost:5432/your_database_name
+Replace `username`, `password`, and `your_database_name` with your actual credentials and database name.
+2. **Run Database Migrations (if applicable)**: If your project uses migrations, run them to set up your database schema.
 
-    DATABASE_URI=your_database_uri
-    SESSION_SECRET=your_session_secret
-    OAUTH_CLIENT_ID=your_oauth_client_id
-    OAUTH_CLIENT_SECRET=your_oauth_client_secret
+### Troubleshooting
+- If you encounter any issues, refer to the PostgreSQL documentation or the FAQs on their website for troubleshooting.
 
-Replace the placeholders with your actual data. Do not commit this file to your public repository.
+## Google Authentication
+To enable Google authentication:
+- Visit Google Developers Console.
+- Create or select a project.
+- In "APIs & Services" > "Credentials," create an OAuth client ID.
+- Select "Web application" type.
+- Add `http://localhost:3000` and `http://localhost:3000/auth/google/callback` to respective fields.
+- Generate Client ID and Secret, and add to your `.env` file:
+GOOGLE_CLIENT_ID=<your_google_client_id>
+GOOGLE_CLIENT_SECRET=<your_google_client_secret>
 
-4. **Start the server:**
-    npm start
+## Usage
+1. **Start the Server**:
+npm start
+Access the application at `localhost:3000`.
+2. **Navigate to the Application**:
+Open a web browser and go to `http://localhost:3000` to interact with the application.
 
-Access the application through localhost:3000 on your browser.
-
-## Google Authentication Setup
-
-To enable Google authentication, you'll need to set up a Google OAuth 2.0 Client ID and Client Secret. 
-
--Follow these steps:
-
--Go to the Google Developers Console.
-
--Create a new project or select an existing one.
-
--In the project dashboard, navigate to "APIs & Services" > "Credentials."
-
--Click on "Create credentials" and choose "OAuth client ID."
-
--Select "Web application" as the application type.
-
--Under "Authorized JavaScript origins," add http://localhost:3000 if you're running the application locally.
-
-Under "Authorized redirect URIs," add http://localhost:3000/auth/google/callback.
-
-Click "Create" to generate your Client ID and Client Secret.
-
--Copy and paste the Client ID and Client Secret into your .env file:
-    GOOGLE_CLIENT_ID=your_google_client_id
-    GOOGLE_CLIENT_SECRET=your_google_client_secret
-
-Save the .env file.
-
-Now, your application is set up to use Google authentication. 
-Users can log in with their Google accounts.
-
-
-### Usage
-
-1. **Start the server:**
-
-    npm start
-
-This will start the application, and you can access it through your web browser at http://localhost:3000.
-
-2. **Access the Application:**
-Open your web browser and navigate to http://localhost:3000 to access the application.
-
-Access the application through localhost:3000 on your browser.
+## Screenshots
 
 ![Register Page](/screenshots/register.png)
-Register Page: This page allows users to create a new account by providing their necessary information, including username and password. Users can also choose to register using their Google account, making the registration process even more convenient.
+**Register Page**: Users can sign up using personal details or Google account.
 
 ![Login Page](/screenshots/login.png)
-Login Page: Users can log in to their existing accounts on this page by entering their registered credentials. Additionally, they have the option to log in using their Google account, providing a quick and secure way to access the application's features.
+**Login Page**: Login with credentials or Google account.
 
 ![Submit Page](/screenshots/submit.png)
-Submit Page: This page provides users with a form to submit content or information to the application. It might be used for various purposes, such as posting updates or sharing content.
+**Submit Page**: A form for content submission.
 
 ![Secrets Page](/screenshots/secrets.png)
-Secrets Page: The Secrets Page is where users can access and view protected or exclusive content within the application. It's the destination for users who have successfully authenticated and logged in.
+**Secrets Page**: Access exclusive content post-authentication.
+
+## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+For inquiries or collaboration, feel free to reach out via GitHub:
+Email: [147574241+Danh321@users.noreply.github.com](mailto:147574241+Danh321@users.noreply.github.com)
+
+## Acknowledgments
+Inspired by Dr. Angela Yu/Udemy's "The Complete 2023 Web Development Bootcamp"
+
+## About the Author
+
+Danny is a dynamic junior full stack web developer, leveraging an extensive background in trades and safety management to bring a unique perspective to the tech industry. As a dual Red Seal holder in Millwright and Welding, Danny has developed an acute sense of problem-solving, precision, and adaptability, skills that are invaluable in the meticulous world of coding.
+
+His experience as an Occupational Health and Safety (OHSE) Advisor, complemented by an NCSO certification, has ingrained in him the critical importance of regulatory compliance and risk management. Danny applies this meticulous attention to detail and procedural adherence to web development, ensuring that solutions are not only innovative but also robust and compliant with best practices.
+
+Driven by a commitment to lifelong learning and an enthusiasm for embracing new challenges, Danny is dedicated to crafting secure, efficient, and user-centric applications in the realm of full stack web development. His journey from the trades to tech exemplifies his ability to adapt, learn, and excel, making him a valuable asset in the ever-evolving landscape of web technology.
