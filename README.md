@@ -29,6 +29,14 @@ The AuthLearningProject is an initiative aimed at exploring web security, partic
 - **OAuth 2.0**: For secure delegated access.
 - **Node.js & Express.js**: Server-side frameworks.
 - **bcrypt**: For secure password hashing.
+- **EJS**: Templating engine to dynamically render HTML.
+- **Passport.js**: Authentication middleware for Node.js.
+- **Passport-Local**: Strategy for username and password login.
+- **Passport-Google-OAuth20**: Strategy for Google OAuth authentication.
+- **body-parser**: Middleware for parsing incoming request bodies.
+- **PostgreSQL**: Database system used for data storage.
+- **dotenv**: Module to load environment variables from a `.env` file.
+- **express-session**: Middleware for managing user sessions.
 
 ## Learning Highlights
 - Implementing bcrypt for password security.
