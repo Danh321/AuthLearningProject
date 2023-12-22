@@ -75,12 +75,14 @@ Open your web browser and navigate to http://localhost:3000 to access the applic
 
 Access the application through localhost:3000 on your browser.
 
-<!-- Screenshot of the Register Page -->
 ![Register Page](/screenshots/register.png)
+Register Page: This page allows users to create a new account by providing their necessary information, including username and password. Users can also choose to register using their Google account, making the registration process even more convenient.
 
-<!-- Screenshot of the Login Page -->
 ![Login Page](/screenshots/login.png)
+Login Page: Users can log in to their existing accounts on this page by entering their registered credentials. Additionally, they have the option to log in using their Google account, providing a quick and secure way to access the application's features.
 
-<!-- Screenshot of the Secrets Page -->
+![Submit Page](/screenshots/submit.png)
+Submit Page: This page provides users with a form to submit content or information to the application. It might be used for various purposes, such as posting updates or sharing content.
+
 ![Secrets Page](/screenshots/secrets.png)
-
+Secrets Page: The Secrets Page is where users can access and view protected or exclusive content within the application. It's the destination for users who have successfully authenticated and logged in.
