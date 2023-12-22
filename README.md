@@ -62,6 +62,38 @@ Replace the placeholders with your actual data. Do not commit this file to your 
 
 Access the application through localhost:3000 on your browser.
 
+## Google Authentication Setup
+
+To enable Google authentication, you'll need to set up a Google OAuth 2.0 Client ID and Client Secret. 
+
+-Follow these steps:
+
+-Go to the Google Developers Console.
+
+-Create a new project or select an existing one.
+
+-In the project dashboard, navigate to "APIs & Services" > "Credentials."
+
+-Click on "Create credentials" and choose "OAuth client ID."
+
+-Select "Web application" as the application type.
+
+-Under "Authorized JavaScript origins," add http://localhost:3000 if you're running the application locally.
+
+Under "Authorized redirect URIs," add http://localhost:3000/auth/google/callback.
+
+Click "Create" to generate your Client ID and Client Secret.
+
+-Copy and paste the Client ID and Client Secret into your .env file:
+    GOOGLE_CLIENT_ID=your_google_client_id
+    GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+Save the .env file.
+
+Now, your application is set up to use Google authentication. 
+Users can log in with their Google accounts.
+
+
 ### Usage
 
 1. **Start the server:**
